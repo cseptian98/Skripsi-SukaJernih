@@ -1,0 +1,36 @@
+table,
+th,
+td {
+    border: 0px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 3px;
+}
+
+@media screen {
+    #printSection {
+        display: none;
+    }
+    #printSection,
+    #printSection * {
+        visibility: hidden;
+    }
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #printSection,
+    #printSection * {
+        visibility: visible;
+    }
+    #printSection {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
